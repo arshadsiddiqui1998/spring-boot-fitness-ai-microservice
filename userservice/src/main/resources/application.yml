@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: userservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/fitnessuserservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+server:
+  port: 8081
