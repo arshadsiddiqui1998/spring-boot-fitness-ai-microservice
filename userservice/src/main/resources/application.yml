@@ -3,7 +3,7 @@ spring:
     name: userservice
 
   datasource:
-    url: jdbc:mysql://localhost:3306/fitnessuserservice?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/fitnessuserservice
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,7 +12,11 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
-    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 server:
   port: 8081
